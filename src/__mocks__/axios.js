@@ -3,15 +3,15 @@ const fixtures = {
     {
       id: 1,
       name: "Monday",
-      appointments: [1, 2],
-      interviewers: [1, 2],
+      appointments: [ 1, 2 ],
+      interviewers: [ 1, 2 ],
       spots: 1
     },
     {
       id: 2,
       name: "Tuesday",
-      appointments: [3, 4],
-      interviewers: [3, 4],
+      appointments: [ 3, 4 ],
+      interviewers: [ 3, 4 ],
       spots: 1
     }
   ],
@@ -54,6 +54,8 @@ const fixtures = {
 };
 
 export default {
+  defaults: { baseURL: "" },
+
   get: jest.fn(url => {
     if (url === "/api/days") {
       return Promise.resolve({
